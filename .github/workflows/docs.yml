@@ -1,15 +1,15 @@
 name: Deploy Docs
 on:
-  push:
-    branches: [main]
+    push:
+        branches: [master]
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: peaceiris/actions-mdbook@v1
-      - run: mdbook build docs
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/book
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: peaceiris/actions-mdbook@v1
+            - run: mdbook build docs
+            - uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./docs/book
