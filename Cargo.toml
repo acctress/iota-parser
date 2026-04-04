@@ -1,0 +1,13 @@
+[package]
+name = "iota-parser"
+version = "0.1.0"
+edition = "2024"
+description = "A PEG parser combinator library for Rust. Write parsers that look like grammars."
+license = "MIT"
+repository = "https://github.com/acctress/iota-parser"
+keywords = ["parser", "peg", "combinator", "parsing", "grammar"]
+categories = ["parsing", "text-processing"]
+
+[lib]
+name = "iota"
+path = "src/lib.rs"
